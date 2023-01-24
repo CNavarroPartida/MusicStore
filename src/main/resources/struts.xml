@@ -14,8 +14,9 @@
     <package name="default" namespace="/" extends="struts-default">
         <action name="login" class="com.music.store.actions.LoginAction">
             <result name="login">/WEB-INF/content/login.jsp</result>
-            <result name="success_common">/WEB-INF/content/homeuser.jsp</result>
+            <result name="success_common">/WEB-INF/content/homeadmin.jsp</result>
             <result name="success_admin">/WEB-INF/content/homeadmin.jsp</result>
+            <result name="input">/WEB-INF/content/login.jsp</result>
         </action>
         <action name="saveSong" class="com.music.store.actions.SaveSongAction">
             <param name="song.id"/>
