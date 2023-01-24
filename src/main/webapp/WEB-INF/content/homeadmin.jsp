@@ -49,14 +49,8 @@
     </div>
     <div class="col-10">
         <div class="tab-content" id="v-pills-tabContent">
-            <div class="tab-pane fade" id="v-pills-ventas" role="tabpanel" aria-labelledby="v-pills-ventas-tab">
-                <%@ include file="../components/ventasComponent.jsp" %>
-            </div>
             <div class="tab-pane fade show active" id="v-pills-canciones" role="tabpanel" aria-labelledby="v-pills-canciones-tab">
                 <%@ include file="../components/cancionesComponent.jsp" %>
-            </div>
-            <div class="tab-pane fade" id="v-pills-usuarios" role="tabpanel" aria-labelledby="v-pills-usuarios-tab">
-                <%@ include file="../components/usuariosComponent.jsp" %>
             </div>
         </div>
     </div>
