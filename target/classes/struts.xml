@@ -1,0 +1,42 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE struts PUBLIC
+        "-//Apache Software Foundation//DTD Struts Configuration 2.5//EN"
+        "http://struts.apache.org/dtds/struts-2.5.dtd">
+
+<struts>
+    <constant name="struts.enable.DynamicMethodInvocation" value="false"/>
+    <constant name="struts.devMode" value="false"/>
+    <constant name="struts.objectFactory" value="org.apache.struts2.spring.StrutsSpringObjectFactory"/>
+
+    <package name="base" extends="struts-default" namespace="/"/>
+    <package name="data" extends="json-default" namespace="/data"/>
+
+    <package name="default" namespace="/" extends="struts-default">
+        <action name="login" class="com.music.store.actions.LoginAction">
+            <result name="login">/WEB-INF/content/login.jsp</result>
+            <result name="success_common">/WEB-INF/content/homeuser.jsp</result>
+            <result name="success_admin">/WEB-INF/content/homeadmin.jsp</result>
+        </action>
+        <action name="saveSong" class="com.music.store.actions.SaveSongAction">
+            <param name="song.id"/>
+            <param name="song.title"/>
+            <param name="song.artist"/>
+            <param name="song.album"/>
+            <param name="song.genre"/>
+            <param name="song.price"/>
+            <param name="song.availableQuantity"/>
+            <result name="input">/WEB-INF/content/homeadmin.jsp</result>
+            <result name="success">/WEB-INF/content/homeadmin.jsp</result>
+            <result name="error">/WEB-INF/content/homeadmin.jsp</result>
+            <result name="duplicate_title">/WEB-INF/content/homeadmin.jsp</result>
+        </action>
+        <action name="deleteSong" class="com.music.store.actions.DeleteSongAction">
+            <param name="id"/>
+            <result name="success">/WEB-INF/content/homeadmin.jsp</result>
+            <result name="song_not_found">/WEB-INF/content/homeadmin.jsp</result>
+            <result name="error">/WEB-INF/content/homeadmin.jsp</result>
+            <result name="input">/WEB-INF/content/homeadmin.jsp</result>
+        </action>
+    </package>
+
+</struts>

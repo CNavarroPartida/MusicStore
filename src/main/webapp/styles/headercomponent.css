@@ -1,0 +1,10 @@
+.navigation {
+    background-color: #237527 !important;
+    width: 100%;
+    padding-left: 2rem;
+    border-bottom: 1px solid grey;
+}
+
+.navigation span{
+    color: #fff;
+}
